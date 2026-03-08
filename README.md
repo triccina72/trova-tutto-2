@@ -192,9 +192,9 @@ Esempio risposta: "Hai salvato: chiavi sono nel cassetto. telefono è sul tavolo
 - "Resetta tutto"
 - "Pulisci archivio"
 
-Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?"  Dimmi quelli importanti
+Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?" 
 Se non esistono importanti: "Questa azione è irreversibile. Sei proprio sicura?"
-----
+
 Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?"
 - "Dimmi quelli importanti"
 - "Quali?"
