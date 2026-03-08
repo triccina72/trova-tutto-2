@@ -163,7 +163,6 @@ Se trova più risultati: "Ho trovato 3 risultati: …"
 - "Lista marzo"
 
 **Lista importanti:**
-- "Importanti"
 - "Lista importanti"
 - "Dimmi quelli importanti"
 
@@ -193,10 +192,14 @@ Esempio risposta: "Hai salvato: chiavi sono nel cassetto. telefono è sul tavolo
 - "Resetta tutto"
 - "Pulisci archivio"
 
-Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?"  
+Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?"  Dimmi quelli importanti
 Se non esistono importanti: "Questa azione è irreversibile. Sei proprio sicura?"
+----
+Se esistono importanti: "Attenzione! Ci sono N oggetti importanti. Vuoi cancellare anche quelli?"
+- "Dimmi quelli importanti"
+- "Quali?"
+Gli oggetti importanti sono: appuntamento mamma, passaporto. Vuoi cancellarli comunque?
 
----
 
 ### 10) ANNULLA / STOP
 
