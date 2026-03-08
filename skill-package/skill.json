@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "it-IT": {
+          "name": "Trova Tutto",
+          "summary": "Trova dove hai messo le tue cose",
+          "description": "Skill per salvare e trovare oggetti con il luogo dove si trovano. Supporta salvataggio, ricerca, liste, report e cancellazione con persistenza su DynamoDB.",
+          "examplePhrases": [
+            "Alexa, apri Trova Tutto",
+            "salva chiavi nel cassetto",
+            "dove ho messo il telefono"
+          ]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Prova a dire: salva chiavi nel cassetto",
+      "category": "UTILITIES",
+      "distributionCountries": ["IT"]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
