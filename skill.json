@@ -1,0 +1,89 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "it-IT": {
+          "summary": "memorizzare le cose.",
+          "examplePhrases": [
+            "Alexa, apri trova tutto",
+            "Metti le chiavi di casa nel cassetto dell\u0027ingressoAlexa, apri Trova Tutto e cerca le chiavi",
+            "chiedi a trova tutto dove sono le chiaviAlexa, apri Trova Tutto e lista importante"
+          ],
+          "keywords": [
+            "cerca",
+            "posizionare",
+            "trovare",
+            "memoria",
+            "oggetti",
+            "casa",
+            "organizer."
+          ],
+          "name": "Trova Tutto",
+          "description": "Trova Tutto è l\u0027assistente personale che ricorda dove metti le cose. Puoi salvare la posizione di oggetti (\"chiavi nel cassetto\"), date importanti (\"visita medica il 12 marzo\") e creare liste. Supporta la gestione degli oggetti \"Importanti\" per evitare cancellazioni accidentali e la ricerca intelligente.",
+          "smallIconUri": "file://assets/images/it-IT_smallIconUri.png",
+          "updatesDescription": "Versione 5.2: Gestione date, filtri intelligenti e protezione cancellazione.",
+          "largeIconUri": "file://assets/images/it-IT_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "{\"ask_dist_username\":\"\",\"ask_dist_password\":\"\",\"ask_dist_testing_instructions\":\"Sample Testing Instructions.\"}",
+      "category": "TO_DO_LISTS_AND_NOTES",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "IT"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:622070274814:function:bbcc8063-45b1-477f-99a2-8b73f14c92b6:Release_0"
+        },
+        "interfaces": [],
+        "locales": {},
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:622070274814:function:bbcc8063-45b1-477f-99a2-8b73f14c92b6:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:622070274814:function:bbcc8063-45b1-477f-99a2-8b73f14c92b6:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:622070274814:function:bbcc8063-45b1-477f-99a2-8b73f14c92b6:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "it-IT": {
+          "termsOfUseUrl": "http://google.com",
+          "privacyPolicyUrl": "http://google.com"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "shoppingKit": {
+        "isShoppingActionsEnabled": false,
+        "isAmazonAssociatesOnAlexaEnabled": false
+      },
+      "usesPersonalInfo": false
+    }
+  }
+}
