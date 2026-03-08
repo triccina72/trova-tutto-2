@@ -1,0 +1,20 @@
+{
+  "name": "trova-tutto-lambda",
+  "version": "1.0.0",
+  "description": "Lambda per la skill Alexa Trova Tutto",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "test:unit": "jest --forceExit"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-dynamodb-persistence-adapter": "^2.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
