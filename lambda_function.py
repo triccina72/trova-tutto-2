@@ -59,7 +59,6 @@ def pulisci_testo(t):
         "ricorda ", "archivio ", "trova ", "cerca ", "dov'e ", "dove sono ",
         "dove sta ", "dove stanno ", "fammi la ", "leggi la ", "dimmi la ",
         "quali sono ", "quali ", "cosa c'e ", "cosa ho messo ", "leggi ", "controlla ",
-        "nell' ", "nell'", "sull' ", "sull'", "dall' ", "dall'", "all' ", "all'", "un' ", "un'", "l' ", "l'",
         "li ", "qui ", "via ", "a posto ", "di ", "mi "
     ]
     pulito = False
@@ -361,7 +360,8 @@ class NoIntentHandler(AbstractRequestHandler):
         if ctx == "CHECK_IMPORTANCE":
             d = s.pop("pending_save", None)
             if d:
-                db = get_memoria(uid); db[d["obj"]] = d["loc"]; salva_memoria(uid, db)
+                db = get_memoria(uid); db[d["obj"]] = d["loc"];
+                salva_memoria(uid, db)
                 s["context"] = "NORMAL"
                 return handler_input.response_builder.speak("Salvato. Altro?").ask("Altro?").response
         if ctx == "DELETE_CONFIRMATION":
