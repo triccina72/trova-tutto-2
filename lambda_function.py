@@ -59,6 +59,7 @@ def pulisci_testo(t):
         "ricorda ", "archivio ", "trova ", "cerca ", "dov'e ", "dove sono ",
         "dove sta ", "dove stanno ", "fammi la ", "leggi la ", "dimmi la ",
         "quali sono ", "quali ", "cosa c'e ", "cosa ho messo ", "leggi ", "controlla ",
+        "nell' ", "nell'", "sull' ", "sull'", "dall' ", "dall'", "all' ", "all'", "un' ", "un'", "l' ", "l'",
         "li ", "qui ", "via ", "a posto ", "di ", "mi "
     ]
     pulito = False
@@ -276,7 +277,7 @@ class CancellaOggettoHandler(AbstractRequestHandler):
         slot_obj = slots.get("oggetto") if slots else None
         raw_obj = slot_obj.value if (slot_obj and getattr(slot_obj, "value", None)) else ""
         da_c = pulisci_testo(raw_obj)
-        if not da_c: return handler_input.response_builder.speak("Cosa vuoi cancellare?").ask("Cosa?").response
+        if not da_c: return handler_input.response_builder.speak("Cosa vuoi cancellare?").ask("Cosa?" ).response
         uid = handler_input.request_envelope.session.user.user_id
         db, trovato = get_memoria(uid), None
         for k in db.keys():
