@@ -78,9 +78,13 @@
             "nel {Luogo}",
             "nello {Luogo}",
             "nella {Luogo}",
+            "nell' {Luogo}",
             "in {Luogo}",
             "sul {Luogo}",
             "sulla {Luogo}",
+            "sull' {Luogo}",
+            "all' {Luogo}",
+            "dall' {Luogo}",
             "sotto {Luogo}",
             "dietro {Luogo}",
             "{Luogo}"
