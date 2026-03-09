@@ -1,267 +1,34 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "trova tutto",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": ["annulla", "annulla tutto"]
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": ["aiuto", "aiutami", "non so cosa fare", "cosa puoi fare"]
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": ["basta", "esci", "stop", "chiudi", "arrivederci"]
-        },
-        {
-          "name": "AMAZON.YesIntent",
-          "samples": ["sì", "si", "certo", "esatto", "confermo", "ok", "va bene"]
-        },
-        {
-          "name": "AMAZON.NoIntent",
-          "samples": ["no", "no grazie", "non voglio", "lascia perdere"]
-        },
-        {
-          "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
-          "name": "SalvaOggettoLuogoIntent",
-          "slots": [
-            { "name": "Oggetto", "type": "AMAZON.SearchQuery" },
-            { "name": "Luogo", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "salva {Oggetto} nel {Luogo}",
-            "salva {Oggetto} nello {Luogo}",
-            "salva {Oggetto} nella {Luogo}",
-            "salva {Oggetto} in {Luogo}",
-            "salva {Oggetto} sul {Luogo}",
-            "salva {Oggetto} sulla {Luogo}",
-            "salva {Oggetto} sotto {Luogo}",
-            "salva {Oggetto} dietro {Luogo}",
-            "metti {Oggetto} nel {Luogo}",
-            "metti {Oggetto} nello {Luogo}",
-            "metti {Oggetto} nella {Luogo}",
-            "metti {Oggetto} in {Luogo}",
-            "metti {Oggetto} sul {Luogo}",
-            "metti {Oggetto} sulla {Luogo}",
-            "segna {Oggetto} nel {Luogo}",
-            "segna {Oggetto} in {Luogo}",
-            "ho infilato {Oggetto} nello {Luogo}",
-            "ho messo {Oggetto} nel {Luogo}",
-            "ho messo {Oggetto} in {Luogo}",
-            "butta {Oggetto} sul {Luogo}",
-            "butta {Oggetto} sulla {Luogo}"
-          ]
-        },
-        {
-          "name": "SalvaOggettoIntent",
-          "slots": [
-            { "name": "Oggetto", "type": "AMAZON.SearchQuery" },
-            { "name": "luogo", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "salva {Oggetto}",
-            "segna {Oggetto}",
-            "memorizza {Oggetto}",
-            "aggiungi {Oggetto}",
-            "nell' {luogo}",
-            "nell'{luogo}",
-            "sull' {luogo}",
-            "sull'{luogo}",
-            "all' {luogo}",
-            "all'{luogo}",
-            "dall' {luogo}",
-            "dall'{luogo}",
-            "un' {luogo}",
-            "un'{luogo}",
-            "l' {luogo}",
-            "l'{luogo}",
-            "in un {luogo}",
-            "nel {luogo}",
-            "in {luogo}",
-            "sul {luogo}",
-            "su un {luogo}",
-            "nella {luogo}",
-            "in una {luogo}",
-            "sulla {luogo}"
-          ]
-        },
-        {
-          "name": "InserisciLuogoIntent",
-          "slots": [
-            { "name": "Luogo", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "nel {Luogo}",
-            "nello {Luogo}",
-            "nella {Luogo}",
-            "nell' {Luogo}",
-            "in {Luogo}",
-            "sul {Luogo}",
-            "sulla {Luogo}",
-            "sull' {Luogo}",
-            "all' {Luogo}",
-            "dall' {Luogo}",
-            "sotto {Luogo}",
-            "dietro {Luogo}",
-            "{Luogo}"
-          ]
-        },
-        {
-          "name": "TrovaOggettoIntent",
-          "slots": [
-            { "name": "Oggetto", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "dove ho messo {Oggetto}",
-            "dove ho messo il {Oggetto}",
-            "dove ho messo la {Oggetto}",
-            "trova {Oggetto}",
-            "cerca {Oggetto}",
-            "non trovo {Oggetto}",
-            "non trovo il {Oggetto}",
-            "hai visto {Oggetto}",
-            "hai visto il {Oggetto}",
-            "dove sono {Oggetto}",
-            "dove sono le {Oggetto}",
-            "dove sono gli {Oggetto}",
-            "dove è {Oggetto}",
-            "quando è {Oggetto}"
-          ]
-        },
-        {
-          "name": "CosaHaiLuogoIntent",
-          "slots": [
-            { "name": "Luogo", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "cosa c'è nel {Luogo}",
-            "cosa c'è nello {Luogo}",
-            "cosa c'è nella {Luogo}",
-            "cosa c'è in {Luogo}",
-            "cosa c'è sul {Luogo}",
-            "cosa c'è sulla {Luogo}",
-            "cosa c'è a {Luogo}",
-            "cosa hai nel {Luogo}",
-            "cosa ho nel {Luogo}",
-            "che impegni ho il {Luogo}",
-            "che impegni ho a {Luogo}"
-          ]
-        },
-        {
-          "name": "CancellaOggettoIntent",
-          "slots": [
-            { "name": "Oggetto", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "cancella {Oggetto}",
-            "elimina {Oggetto}",
-            "togli {Oggetto}",
-            "dimentica {Oggetto}",
-            "rimuovi {Oggetto}",
-            "togli {Oggetto} dalla memoria"
-          ]
-        },
-        {
-          "name": "ListaIntent",
-          "samples": [
-            "lista",
-            "elenco",
-            "dimmi cosa ho salvato",
-            "leggi cosa ho salvato",
-            "lista completa",
-            "cosa c'è in memoria",
-            "cosa ho salvato",
-            "mostrami tutto"
-          ]
-        },
-        {
-          "name": "ListaFiltroIntent",
-          "slots": [
-            { "name": "Filtro", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "lista {Filtro}",
-            "elenco {Filtro}"
-          ]
-        },
-        {
-          "name": "ListaImportantiIntent",
-          "samples": [
-            "importanti",
-            "lista importanti",
-            "dimmi quelli importanti",
-            "elenco importanti",
-            "mostrami gli importanti"
-          ]
-        },
-        {
-          "name": "ReportIntent",
-          "samples": [
-            "report",
-            "report completo",
-            "dimmi tutto con i luoghi"
-          ]
-        },
-        {
-          "name": "ReportFiltroIntent",
-          "slots": [
-            { "name": "Filtro", "type": "AMAZON.SearchQuery" }
-          ],
-          "samples": [
-            "report {Filtro}"
-          ]
-        },
-        {
-          "name": "ReportImportantiIntent",
-          "samples": [
-            "report importanti",
-            "report degli importanti"
-          ]
-        },
-        {
-          "name": "SvuotaTuttoIntent",
-          "samples": [
-            "svuota tutto",
-            "cancella tutto",
-            "elimina tutto",
-            "resetta tutto",
-            "pulisci archivio",
-            "azzera tutto"
-          ]
-        },
-        {
-          "name": "AiutoSalvareIntent",
-          "samples": [
-            "aiuto salvare",
-            "come si salva",
-            "come faccio a salvare",
-            "salvare"
-          ]
-        },
-        {
-          "name": "AiutoCercareIntent",
-          "samples": [
-            "aiuto cercare",
-            "come si cerca",
-            "come faccio a cercare",
-            "cercare"
-          ]
-        },
-        {
-          "name": "AiutoListeIntent",
-          "samples": [
-            "aiuto liste",
-            "come funzionano le liste",
-            "differenza tra lista e report",
-            "liste e report"
-          ]
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "trova tutto",
+            "intents": [
+                { "name": "AMAZON.CancelIntent", "samples": [ "annulla tutto", "annulla" ] },
+                { "name": "AMAZON.HelpIntent", "samples": [ "istruzioni", "spiegami come funziona", "non so cosa fare", "mi serve aiuto", "aiuto" ] },
+                { "name": "AMAZON.StopIntent", "samples": [ "basta", "chiudi", "esci", "ho fatto", "nient'altro", "niente", "tutto a posto", "a posto", "finito", "ciao", "saluti" ] },
+                { "name": "AMAZON.NavigateHomeIntent", "samples": [] },
+                { "name": "AMAZON.FallbackIntent", "samples": [] },
+                { "name": "AiutoIntent", "slots": [ { "name": "argomento", "type": "ARGOMENTO_AIUTO" } ], "samples": [ "spiega {argomento}", "aiuto per {argomento}", "spiegami come {argomento}", "aiuto su {argomento}", "aiuto {argomento}", "come faccio a {argomento}", "come si usa {argomento}", "spiegami {argomento}", "dimmi come funziona {argomento}", "non so come {argomento}", "ho bisogno di aiuto con {argomento}", "come funziona {argomento}" ] },
+                { "name": "SalvaOggettoIntent", "slots": [ { "name": "oggetto", "type": "AMAZON.SearchQuery" }, { "name": "luogo", "type": "AMAZON.SearchQuery" } ], "samples": [ "il {luogo}", "al {luogo}", "butta {oggetto}", "incastra {oggetto}", "ho cacciato {oggetto}", "di sistemare {oggetto}", "di nascondere {oggetto}", "di incastrare {oggetto}", "di ficcare {oggetto}", "di mollare {oggetto}", "di piazzare {oggetto}", "di buttare {oggetto}", "di infilare {oggetto}", "ho incastrato {oggetto}", "ho mollato {oggetto}", "ho ficcato {oggetto}", "ho buttato {oggetto}", "ho infilato {oggetto}", "nascondo {oggetto}", "incastro {oggetto}", "ficco {oggetto}", "infilo {oggetto}", "ricordami che metto {oggetto}", "ricordami che sto mettendo {oggetto}", "segna che ho messo {oggetto}", "segna che metto {oggetto}", "segna che lascio {oggetto}", "voglio salvare {oggetto}", "voglio mettere via {oggetto}", "devo posare {oggetto}", "devo mettere {oggetto}", "sto mettendo {oggetto}", "sto posando {oggetto}", "tieni a mente {oggetto}", "non dimenticare {oggetto}", "salvami {oggetto}", "salvata {oggetto}", "salvare {oggetto}", "mettere a posto {oggetto}", "mettere via {oggetto}", "di mettere a posto {oggetto}", "di mettere via {oggetto}", "posa {oggetto}", "metti via {oggetto}", "metti a posto {oggetto}", "nell' {luogo}", "sull' {luogo}", "all' {luogo}", "dall' {luogo}", "un' {luogo}", "l' {luogo}", "in un {luogo}", "su un {luogo}", "in una {luogo}", "tra {luogo}", "fra {luogo}", "mettilo {luogo}", "mettili {luogo}", "lo metto {luogo}", "li metto {luogo}", "dietro {luogo}", "sotto {luogo}", "sopra {luogo}", "sulle {luogo}", "sugli {luogo}", "sui {luogo}", "sulla {luogo}", "sullo {luogo}", "nelle {luogo}", "negli {luogo}", "nei {luogo}", "nella {luogo}", "nello {luogo}", "da {luogo}", "su {luogo}", "a {luogo}", "in {luogo}", "nel {luogo}", "sul {luogo}", "segnare {oggetto}", "ricorda {oggetto}", "prendi {oggetto}", "scrivi {oggetto}", "di lasciare {oggetto}", "di appoggiare {oggetto}", "di posare {oggetto}", "di riporre {oggetto}", "di salvare {oggetto}", "salva {oggetto}", "segna {oggetto}", "memorizzare {oggetto}", "mettere {oggetto}", "metti {oggetto}", "posto {luogo}", "dentro {luogo}", "sul {oggetto}", "che metto {oggetto}", "di ricordare {oggetto}", "di segnare {oggetto}", "che ho messo {oggetto}", "di mettere {oggetto}", "metto {oggetto}", "sto riponendo {oggetto}", "sto mettendo via {oggetto}", "ora metto {oggetto}", "metto a posto {oggetto}", "caccio {oggetto}", "ho lasciato {oggetto}", "ho messo {oggetto}", "piazzo {oggetto}", "butto {oggetto}", "ho qui {oggetto}", "ho {oggetto}", "archivio {oggetto}", "ho in mano {oggetto}", "dove metto {oggetto}", "memorizza {oggetto}", "segna la posizione di {oggetto}", "ricordami {oggetto}", "mollo {oggetto}", "lascio {oggetto}", "appoggio {oggetto}", "devo sistemare {oggetto}", "sistemo {oggetto}", "devo mettere a posto {oggetto}", "poso {oggetto}", "devo mettere via {oggetto}", "ho messo via {oggetto}", "metto via {oggetto}", "ripongo {oggetto}" ] },
+                { "name": "CercaOggettoIntent", "slots": [ { "name": "oggetto", "type": "AMAZON.SearchQuery" } ], "samples": [ "cosa c'è a {oggetto}", "che impegno ho {oggetto}", "che cosa ho a {oggetto}", "cosa ho a {oggetto}", "quando sono gli {oggetto}", "cosa c'è fra {oggetto}", "cosa c'è tra {oggetto}", "dov'è", "dove sono", "quali impegni ho il {oggetto}", "dimmi gli impegni del {oggetto}", "cosa ho da fare il {oggetto}", "cosa ho il {oggetto}", "che impegni ho {oggetto}", "che impegni ho per il {oggetto}", "che impegni ho il {oggetto}", "dove sono i {oggetto}", "dove sono le {oggetto}", "dove sono gli {oggetto}", "cerca i {oggetto}", "cerca le {oggetto}", "cerca gli {oggetto}", "cercami i {oggetto}", "cercami le {oggetto}", "quando sono i {oggetto}", "quando sono le {oggetto}", "dimmi dov'è {oggetto}", "dimmi dove sono {oggetto}", "cercami {oggetto}", "quando è {oggetto}", "trova il {oggetto}", "cerca la {oggetto}", "cerca il {oggetto}", "che data è {oggetto}", "che giorno è la {oggetto}", "che giorno è {oggetto}", "a che ora è la {oggetto}", "a che ora è {oggetto}", "quando è il {oggetto}", "quando è la {oggetto}", "controlla il {oggetto}", "leggi il {oggetto}", "cosa ho messo sul {oggetto}", "cosa ho messo nel {oggetto}", "cosa ho messo il {oggetto}", "cosa c'è dentro {oggetto}", "cosa c'è sulla {oggetto}", "cosa c'è sul {oggetto}", "cosa c'è nella {oggetto}", "cosa c'è nel {oggetto}", "cosa c'è al {oggetto}", "cosa c'è il {oggetto}", "{oggetto} dov'è punto interrogativo", "{oggetto} punto interrogativo", "{oggetto} dove sono finiti", "{oggetto} dov'è finita", "{oggetto} dove le ho messe", "{oggetto} dove li ho messi", "{oggetto} dove l'ho messa", "{oggetto} dove l'ho messo", "{oggetto} dove si trovano", "{oggetto} dove stanno", "{oggetto} dove è", "{oggetto} dov'è finito", "{oggetto} dove sono", "{oggetto} dove sta", "{oggetto} dove si trova", "{oggetto} dov'è", "di dirmi dove sono {oggetto}", "cercare {oggetto}", "di trovare {oggetto}", "di cercare {oggetto}", "non trovo {oggetto}", "ho perso {oggetto}", "mi serve {oggetto}", "recupera {oggetto}", "sai dov'è {oggetto}", "hai visto {oggetto}", "che fine hanno fatto {oggetto}", "che fine ha fatto {oggetto}", "dove ho appoggiato {oggetto}", "dove ho lasciato {oggetto}", "dove ho ficcato {oggetto}", "dove ho cacciato {oggetto}", "dove si trovano {oggetto}", "dove si trova {oggetto}", "trova {oggetto}", "cerca {oggetto}", "trovami {oggetto}" ] },
+                { "name": "ListaOggettiIntent", "slots": [ { "name": "filtro", "type": "AMAZON.SearchQuery" } ], "samples": [ "dimmi cosa ho salvato", "cosa hai salvato", "leggi cosa ho salvato", "lista", "memorizzato", "cosa ho salvato", "dimmi tutto", "dettagli", "dimmi dove sono le cose {filtro}", "lista completa", "dammi un report", "cosa c'è in {filtro}", "dimmi la lista {filtro}", "quali", "dimmi quelli importanti", "quali sono gli importanti", "importante", "importanti", "quali sono", "tutto", "elenco {filtro}", "lista {filtro}", "cosa dovevo ricordarmi", "riepilogo", "quali oggetti ci sono", "fai l'elenco", "dimmi tutto quello che sai", "leggi la lista", "cosa hai memorizzato", "cosa c'è in memoria" ] },
+                { "name": "CancellaOggettoIntent", "slots": [ { "name": "oggetto", "type": "AMAZON.SearchQuery" } ], "samples": [ "cancella {oggetto}", "togli {oggetto} dalla memoria", "elimina {oggetto}", "rimuovi {oggetto}", "dimentica {oggetto}" ] },
+                { "name": "AMAZON.YesIntent", "samples": [ "procedi", "confermo", "certamente", "si" ] },
+                { "name": "AMAZON.NoIntent", "samples": [ "assolutamente no", "lascia stare", "non farlo", "no", "basta così", "a posto così", "grazie mille", "no grazie", "grazie" ] },
+                { "name": "SvuotaTuttoIntent", "slots": [], "samples": [ "pulisci archivio", "resetta tutto", "elimina tutto", "cancella tutto", "svuota tutto" ] },
+                { "name": "ReportOggettiIntent", "slots": [ { "name": "filtro", "type": "AMAZON.SearchQuery" } ], "samples": [ "dimmi dove sono le cose {filtro}", "lista dettagliata {filtro}", "lista completa {filtro}", "dettagli {filtro}", "report {filtro}", "dettagli", "report" ] }
+            ],
+            "types": [
+                {
+                    "name": "ARGOMENTO_AIUTO",
+                    "values": [
+                        { "name": { "value": "salvare", "synonyms": [ "salva", "come si salva", "memorizzare" ] } },
+                        { "name": { "value": "cercare", "synonyms": [ "cerca", "come si cerca", "trovare", "ricercare" ] } },
+                        { "name": { "value": "liste", "synonyms": [ "lista", "elenco", "lista completa" ] } },
+                        { "name": { "value": "report", "synonyms": [ "dettagli", "resoconto", "riepilogo" ] } }
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }
