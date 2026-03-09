@@ -14,6 +14,18 @@ describe('normalize', () => {
     expect(_normalize('le chiavi')).toBe('chiavi');
     expect(_normalize('gli occhiali')).toBe('occhiali');
     expect(_normalize("l'ombrello")).toBe('ombrello');
+    expect(_normalize("l' ombrello")).toBe('ombrello');
+  });
+
+  test('removes elided preposition+article contractions', () => {
+    expect(_normalize("nell'armadio")).toBe('armadio');
+    expect(_normalize("nell' armadio")).toBe('armadio');
+    expect(_normalize("sull'armadio")).toBe('armadio');
+    expect(_normalize("sull' armadio")).toBe('armadio');
+    expect(_normalize("all'armadio")).toBe('armadio');
+    expect(_normalize("all' armadio")).toBe('armadio');
+    expect(_normalize("dall'armadio")).toBe('armadio');
+    expect(_normalize("dall' armadio")).toBe('armadio');
   });
 
   test('removes indefinite articles', () => {
