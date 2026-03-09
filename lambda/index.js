@@ -30,14 +30,16 @@ async function saveItems(attributesManager, items) {
 }
 
 /**
- * Normalise a string for comparison: lowercase, trim, remove Italian articles.
+ * Normalise a string for comparison: lowercase, trim, remove Italian articles
+ * and elided preposition+article contractions (nell', sull', all', dall', l').
  */
 function normalize(str) {
   if (!str) return '';
   return str
     .toLowerCase()
     .trim()
-    .replace(/^(il |la |lo |i |le |gli |un |una |uno |l'|dei |degli |delle |del |della |dello )/i, '');
+    .replace(/^(nell' ?|sull' ?|all' ?|dall' ?|l' ?|il |la |lo |i |le |gli |un |una |uno |dei |degli |delle |del |della |dello )/i, '')
+    .trim();
 }
 
 /** Generate a unique item ID. */
