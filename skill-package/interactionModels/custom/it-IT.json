@@ -60,13 +60,34 @@
         {
           "name": "SalvaOggettoIntent",
           "slots": [
-            { "name": "Oggetto", "type": "AMAZON.SearchQuery" }
+            { "name": "Oggetto", "type": "AMAZON.SearchQuery" },
+            { "name": "luogo", "type": "AMAZON.SearchQuery" }
           ],
           "samples": [
             "salva {Oggetto}",
             "segna {Oggetto}",
             "memorizza {Oggetto}",
-            "aggiungi {Oggetto}"
+            "aggiungi {Oggetto}",
+            "nell' {luogo}",
+            "nell'{luogo}",
+            "sull' {luogo}",
+            "sull'{luogo}",
+            "all' {luogo}",
+            "all'{luogo}",
+            "dall' {luogo}",
+            "dall'{luogo}",
+            "un' {luogo}",
+            "un'{luogo}",
+            "l' {luogo}",
+            "l'{luogo}",
+            "in un {luogo}",
+            "nel {luogo}",
+            "in {luogo}",
+            "sul {luogo}",
+            "su un {luogo}",
+            "nella {luogo}",
+            "in una {luogo}",
+            "sulla {luogo}"
           ]
         },
         {
