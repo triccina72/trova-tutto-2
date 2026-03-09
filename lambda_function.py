@@ -109,8 +109,8 @@ def calcola_grammatica(t):
 
 def formatta_risposta_luogo(verbo, luogo_raw):
     l = str(luogo_raw).replace("|IMP", "").lower().strip()
-    prep_art = ("nel ", "nella ", "nell'", "nello ", "nei ", "negli ", "nelle ", "sul ", "sulla ", "sullo ", "sull'", "sui ", "sugli ", "sulle ", "al ", "il ", "a ", "alla ", "allo ", "all'", "ai ", "agli ", "alle ")
-    preposizioni = ("in ", "su ", "a ", "da ", "sotto ", "sopra ", "dietro ", "dentro ", "vicino ", "il ", "alle ", "l'", "verso ", "tra ", "fra ")
+    prep_art = ("nel ", "nella ", "nell' ", "nello ", "nei ", "negli ", "nelle ", "sul ", "sulla ", "sullo ", "sull' ", "sui ", "sugli ", "sulle ", "al ", "il ", "a ", "alla ", "allo ", "all'", "ai ", "agli ", "alle ")
+    preposizioni = ("in ", "su ", "a ", "da ", "sotto ", "sopra ", "dietro ", "dentro ", "vicino ", "il ", "alle ", "l' ", "verso ", "tra ", "fra ")
     if len(l) > 0 and (l[0].isdigit() or l.startswith(prep_art) or l.startswith(preposizioni)):
         return f"{verbo} {l}"
     femminili = ("cucina", "sala", "borsa", "scatola", "camera", "tasca", "soffitta", "cantina", "mensola", "scrivania", "sedia")
