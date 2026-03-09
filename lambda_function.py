@@ -124,7 +124,7 @@ def formatta_risposta_luogo(verbo, luogo_raw):
 
 def tenta_separazione_intelligente(testo_intero):
     t = str(testo_intero).lower().strip()
-    separatori = [" nello ", " nella ", " nell'", " nel ", " nei ", " negli ", " nelle ", " sullo ", " sulla ", " sulle ", " sull'", " sul ", " sopra ", " sotto ", " dietro ", " dentro ", " in ", " a ", " il ", " alle ", " per le ", " l'", " lo ", " tra ", " fra "]
+    separatori = [" nello ", " nella ", " nell' ", " nell'", " nel ", " nei ", " negli ", " nelle ", " sullo ", " sulla ", " sulle ", " sull'", " sul ", " sopra ", " sotto ", " dietro ", " dentro ", " in ", " a ", " il ", " alle ", " per le ", " l'", " lo ", " tra ", " fra "]
     for s in separatori:
         if s in t:
             parti = t.split(s, 1)
