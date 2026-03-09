@@ -59,7 +59,7 @@ def pulisci_testo(t):
         "ricorda ", "archivio ", "trova ", "cerca ", "dov'e ", "dove sono ",
         "dove sta ", "dove stanno ", "fammi la ", "leggi la ", "dimmi la ",
         "quali sono ", "quali ", "cosa c'e ", "cosa ho messo ", "leggi ", "controlla ",
-        "nell' ", "nell'", "sull' ", "sull'", "dall' ", "dall'", "all' ", "all'", "un' ", "un'", "l' ", "l'",
+        "nell' ", "nell'", "sull' ", "sull'", "dall' ", "dall'", "dell' ", "dell'", "all' ", "all'", "un' ", "un'", "l' ", "l'",
         "li ", "qui ", "via ", "a posto ", "di ", "mi "
     ]
     pulito = False

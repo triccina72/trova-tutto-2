@@ -22,6 +22,14 @@ describe('normalize', () => {
     expect(_normalize('uno zaino')).toBe('zaino');
   });
 
+  test('removes apostrophe prepositions', () => {
+    expect(_normalize("nell'armadio")).toBe('armadio');
+    expect(_normalize("sull'armadio")).toBe('armadio');
+    expect(_normalize("dall'armadio")).toBe('armadio');
+    expect(_normalize("dell'armadio")).toBe('armadio');
+    expect(_normalize("all'armadio")).toBe('armadio');
+  });
+
   test('handles empty / null input', () => {
     expect(_normalize('')).toBe('');
     expect(_normalize(null)).toBe('');

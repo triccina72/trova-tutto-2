@@ -37,7 +37,7 @@ function normalize(str) {
   return str
     .toLowerCase()
     .trim()
-    .replace(/^(il |la |lo |i |le |gli |un |una |uno |l'|dei |degli |delle |del |della |dello )/i, '');
+    .replace(/^(il |la |lo |i |le |gli |un |una |uno |nell'|sull'|dall'|dell'|all'|l'|dei |degli |delle |del |della |dello )/i, '');
 }
 
 /** Generate a unique item ID. */
