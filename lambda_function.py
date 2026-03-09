@@ -420,8 +420,8 @@ class AiutoIntentHandler(AbstractRequestHandler):
                 "Per salvare di' per esempio: salva chiavi nel cassetto. "
                 "Oppure in due tempi: salva chiavi, poi ti chiedo dove, e tu dici nel cassetto. "
                 "Per una data di': salva visita medica il tre marzo. "
-                "Vuoi sapere altro? Dimmi cercare, liste, oppure basta per tornare."
-            ).ask("Dimmi cercare, liste, oppure basta.").response
+                "Vuoi sapere altro? Dimmi aiuto cercare, aiuto liste, oppure annulla per tornare."
+            ).ask("Dimmi aiuto cercare, aiuto liste, oppure annulla.").response
 
         # SOTTOSEZIONE CERCARE
         if argomento and "cerc" in argomento:
@@ -432,8 +432,8 @@ class AiutoIntentHandler(AbstractRequestHandler):
                 "Puoi anche cercare per luogo dicendo: cosa c'e nel cassetto. "
                 "Oppure cerca direttamente per nome dicendo: cerca visite, "
                 "e ti mostro tutto quello che contiene quella parola. "
-                "Vuoi sapere altro? Dimmi salvare, liste, oppure basta per tornare."
-            ).ask("Dimmi salvare, liste, oppure basta.").response
+                "Vuoi sapere altro? Dimmi aiuto salvare, aiuto liste, oppure annulla per tornare."
+            ).ask("Dimmi aiuto salvare, aiuto liste, oppure annulla.").response
 
         # SOTTOSEZIONE LISTE
         if argomento and ("list" in argomento or "report" in argomento):
@@ -443,14 +443,14 @@ class AiutoIntentHandler(AbstractRequestHandler):
                 "Puoi filtrare entrambi dicendo per esempio: lista cassetto, oppure lista marzo. "
                 "Lo stesso vale per report: prova a dire report visite, oppure report marzo, "
                 "per sentire solo gli appuntamenti. "
-                "Vuoi sapere altro? Dimmi salvare, cercare, oppure basta per tornare."
-            ).ask("Dimmi salvare, cercare, oppure basta.").response
+                "Vuoi sapere altro? Dimmi aiuto salvare, aiuto cercare, oppure annulla per tornare."
+            ).ask("Dimmi aiuto salvare, aiuto cercare, oppure annulla.").response
 
         # MENU PRINCIPALE
         session["context"] = "HELP_MAIN"
         return handler_input.response_builder.speak(
-            "Su cosa vuoi aiuto? Puoi dirmi: salvare, cercare, oppure liste."
-        ).ask("Dimmi salvare, cercare, oppure liste.").response
+            "Su cosa vuoi aiuto? Puoi dirmi: aiuto salvare, aiuto cercare, oppure aiuto liste."
+        ).ask("Dimmi aiuto salvare, aiuto cercare, oppure aiuto liste.").response
 
 class FallbackIntentHandler(AbstractRequestHandler):
     def can_handle(self, handler_input): return is_intent_name("AMAZON.FallbackIntent")(handler_input)
@@ -465,9 +465,9 @@ class FallbackIntentHandler(AbstractRequestHandler):
         # Contestuale: menu aiuto
         if session.get("context") == "HELP_MAIN":
             return handler_input.response_builder.speak(
-                "Non ho capito. Puoi dirmi: salvare, cercare, oppure liste. "
-                "Oppure di' basta per tornare."
-            ).ask("Dimmi salvare, cercare, liste, oppure basta.").response
+                "Non ho capito. Puoi dirmi: aiuto salvare, aiuto cercare, oppure aiuto liste. "
+                "Oppure di' annulla per tornare."
+            ).ask("Dimmi aiuto salvare, aiuto cercare, aiuto liste, oppure annulla.").response
         return handler_input.response_builder.speak(
             "Scusa, non ho capito. Puoi ripetere con calma?"
         ).ask("Ripeti.").response
